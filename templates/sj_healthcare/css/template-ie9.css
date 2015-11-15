@@ -1,0 +1,85 @@
+.module h3.modtitle {
+  -ms-filter: none;
+  filter: none;
+}
+#mod-finder-searchform input.inputbox {
+  padding: 0px 30px 0px 10px;
+}
+#yt_header #yt_logo {
+  -ms-transform: translate(0,0);
+}
+.mod-slider-k2 .sj-k2-container-slider .page-button .control-button {
+  text-indent: 0;
+}
+.latest-tweets div.sj-twitter-slider .ts-slider-wrap .ts-items .item .ts-created {
+  text-align: left;
+}
+.latest-tweets .sj-twitter-slider .ts-slider-wrap .ts-items .item .ts-text,
+.latest-tweets .sj-twitter-slider .ts-slider-wrap .ts-items .item .ts-btn {
+  text-align: left;
+}
+.slider .carousel .carousel-control {
+  -ms-filter: none;
+  filter: none;
+}
+.rtl .yt-list.type-disc li:before {
+  display: inline-block;
+  margin: 0 0 0 10px;
+}
+.rtl .module.slider {
+  direction: ltr;
+}
+.rtl .module.slider .carousel-caption {
+  direction: rtl;
+}
+.rtl #yt_menuposition ul.navirtl > li.level1 {
+  direction: ltr;
+}
+.rtl #yt_menuposition ul.navirtl > li.level1 a.item-link {
+  direction: rtl;
+}
+.rtl #yt_menuposition ul.navirtl > li.level1 li.level2 {
+  direction: rtl;
+}
+.rtl .module.bg-content1 h3.modtitle {
+  background: transparent;
+}
+.rtl .row-fluid .first[class*="span"] {
+  margin: 0;
+}
+.rtl .article-header,
+.rtl h3.modtitle,
+.rtl .tab,
+.rtl h2.basicnews-title,
+.rtl .acd-header,
+.rtl h3.related-title,
+.rtl h3.related-item-title,
+.rtl .page-header,
+.rtl .carousel-caption h4,
+.rtl a.more,
+.rtl .bsn-wrap h2,
+.rtl .item-title {
+  font-family: "arial";
+}
+.rtl .latest-tweets div.sj-twitter-slider .ts-slider-wrap .ts-items .item .ts-created {
+  text-align: right;
+}
+.rtl .latest-tweets .sj-twitter-slider .ts-slider-wrap .ts-items .item .ts-text,
+.rtl .latest-tweets .sj-twitter-slider .ts-slider-wrap .ts-items .item .ts-btn {
+  text-align: right;
+}
+.newsletter .modcontent .acymailing_module input[type="submit"] {
+  padding-top: 12px;
+  padding-bottom: 11px;
+}
+.search .btn-toolbar .btn-group.pull-left .btn {
+  padding: 11px 12px 10px;
+}
+.module.cus-mod-healthcare-v2 .item-images .main-content2 a.cus-readmore,
+.module.cus-mod-healthcare-v2 .item-images .main-content1 a.cus-readmore {
+  background-color: #cee999;
+}
+.module.cus-mod-healthcare-v2 .item-images .main-content2 a.cus-readmore:hover,
+.module.cus-mod-healthcare-v2 .item-images .main-content1 a.cus-readmore:hover {
+  background-color: #89AD43;
+}

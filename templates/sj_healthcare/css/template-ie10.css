@@ -1,0 +1,77 @@
+.mm-page {
+  overflow: hidden;
+}
+.rtl .article-header,
+.rtl h3.modtitle,
+.rtl .tab,
+.rtl h2.basicnews-title,
+.rtl .acd-header,
+.rtl h3.related-title,
+.rtl h3.related-item-title,
+.rtl .page-header,
+.rtl .carousel-caption h4,
+.rtl a.more,
+.rtl .bsn-wrap h2,
+.rtl .item-title {
+  font-family: "arial";
+}
+.rtl .latest-tweets div.sj-twitter-slider .ts-slider-wrap .ts-items .item .ts-created {
+  text-align: right;
+}
+.rtl .latest-tweets .sj-twitter-slider .ts-slider-wrap .ts-items .item .ts-text,
+.rtl .latest-tweets .sj-twitter-slider .ts-slider-wrap .ts-items .item .ts-btn {
+  text-align: right;
+}
+.mod-slider-k2 .sj-k2-container-slider .page-button .control-button {
+  text-indent: 0;
+}
+.latest-tweets div.sj-twitter-slider .ts-slider-wrap .ts-items .item .ts-created {
+  text-align: left;
+}
+.latest-tweets .sj-twitter-slider .ts-slider-wrap .ts-items .item .ts-text,
+.latest-tweets .sj-twitter-slider .ts-slider-wrap .ts-items .item .ts-btn {
+  text-align: left;
+}
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  height: 43px;
+}
+.newsletter .modcontent .acymailing_module input[type="submit"] {
+  padding-top: 12px;
+  padding-bottom: 11px;
+}
+.search .btn-toolbar .btn-group.pull-left .btn {
+  padding: 11px 12px 10px;
+}
+.wrap-login textarea,
+.wrap-login input[type='text'],
+.wrap-login input[type='password'],
+.wrap-login input[type='datetime'],
+.wrap-login input[type='datetime-local'],
+.wrap-login input[type='date'],
+.wrap-login input[type='month'],
+.wrap-login input[type='time'],
+.wrap-login input[type='week'],
+.wrap-login input[type='number'],
+.wrap-login input[type='email'],
+.wrap-login input[type='url'],
+.wrap-login input[type='search'],
+.wrap-login input[type='tel'],
+.wrap-login input[type='color'],
+.wrap-login .uneditable-input {
+  border: 1px solid #ccc !important;
+}

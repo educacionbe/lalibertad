@@ -1,0 +1,207 @@
+/*******************************************
+***          YT Framework: less          ***
+*******************************************/
+
+// --* System Tool Templates  *----------------------
+// -----------------------------------------------
+/*   1.Back To Top
+ *   2.Control Cpanel
+ *   3.Select Special Positions
+ */
+
+
+/* 1.Back To Top
+--------------------------------------------------------- */
+.backtotop {
+    background-color: @gray;
+    width: 45px;bottom: 20px;right: 10px;min-height: 42px;
+    overflow: hidden; z-index: 40;position: fixed;display: block;text-align: center;
+    .border-radius(3px);.transition(all 0.5s ease-in-out 0s);.scale(1);.opacity(100);
+    
+    &.hidden-top {bottom: -100px; .scale(0);.opacity(0);}
+    &:hover{background-color:@background2;}
+    i{font-size: 36px;margin: 1px 0 0 0 !important;color: @white;display: inline-block;}
+}
+.bs-docs-example ul.the-icons li:hover{background: @background1;}
+
+/* 2.Control Cpanel
+--------------------------------------------------------- */
+#cpanel_wrapper{
+    background:@dropdownDividerTop;border:1px solid #f3f3f3;border-right:none;.box-shadow( 0 0 1px rgba(0, 0, 0, 0.4));
+    position: fixed;width: 320px;top: 170px;right:-323px;padding:8px;z-index: 999;font-size: 11px;
+    
+    #cpanel_btn{
+	position:absolute;width:48px;height:38px;left:-49px;top:90px;padding: 10px;cursor:pointer;overflow: hidden;
+	background:#666;.border-radius(3px 0 0 3px);
+	&.isDown{background:@background1;}
+        i{font-size: 18px;margin: 0 0 0 4px;color: #fff;text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);}
+	&:hover{
+	    i{text-shadow: 0 0 7px rgba(255, 255, 255, 0.7);}
+	}
+    }
+    #ytcpanel_accordion{margin-bottom: 0;
+        .cpanel-head{font-size:15px;font-weight:bold;text-transform:uppercase;padding:8px 12px ;color: #fff;margin: 1px -9px 8px 0;.box-shadow( 0 1px 2px rgba(0, 0, 0, 0.5) inset);background: #666666;
+	    .cpanel-reset{ float: right; margin: -8px -12px 0;position: relative;z-index: 1;
+		&:before{content: "";position: absolute;border-width: 8px 8px 8px 0px ;left: -7px;top: 9px; border-style: solid;border-color: transparent @background1 transparent transparent;}
+		
+		.btn{
+		    background: @background1; padding: 9px 15px;text-transform: none;border: none;border-radius:0;.transition(all 0.3s ease 0s );
+		    
+		    .fa{display: none;}
+		    
+		    //Focus Button
+		    &:focus{
+			.fa{display: block; float: left;margin: 3px 5px 0 0;}
+		    }
+		}
+		
+		//Hover Reset
+		&:hover{
+		    .btn{padding-right: 30px;}
+		}
+	    }
+        }
+	
+        .cpanel-theme{padding: 10px;background: #fff; overflow: hidden;
+            .panel-group{overflow: hidden;}
+	    .panel-layout{width: 50%;float: left;}
+            .panel-heading{margin: 0 0 8px;padding: 0;
+		span{padding: 1px 5px;border-left: 2px solid #999;}
+	    }
+	    .panel-desc{color: #838383;}
+	    .panel-theme-color{
+		.theme-color{
+		    width: 38px;height: 25px;position: relative;line-height: 25px; cursor: pointer;
+		    float: left;overflow: hidden; text-indent: 100%; white-space: nowrap; margin: 5px 5px 0 0;
+		    .border-radius(3px); .transition(all 0.2s ease-in-out 0s);
+		    .box-shadow(~" 0 -1px 8px 2px rgba(0, 0, 0, 0.3) inset, 0 -1px 0 0 rgba(255, 255, 255, 0.6) inset, 0 2px rgba(0, 0, 0, 0.38), 0 0 #BBBBBB, 0 3px 2px rgba(0, 0, 0, 0.25)") ;
+		
+		    &.active, &:hover{margin-top: 7px;.box-shadow(0 2px 5px 2px rgba(0, 0, 0, 0.4) inset);}
+		}   
+	    }
+	    
+	    .panel-group{
+		input.miniColors{margin: 0 -1px 0 0 !important;border: 1px solid #ccc;width:55px; height: 22px; border-radius: 3px 0 0 3px ; vertical-align: top;}
+		.pattern{
+		    height: 22px; width: 30px; float:left; text-indent:-999em;
+		    margin: 0 5px 0 0;cursor:pointer;background-color: #ddd;
+		    .border-radius(3px);.box-sizing( border-box);.box-shadow(~"0 0 2px rgba(0, 0, 0, 0.5) inset");
+		
+		    &.active{border: 1px solid rgba(0,0,0,0.4);.box-shadow(~"0 1px 3px 2px rgba(0, 0, 0, 0.3) inset, 0 0 0 2px rgba(0, 0, 0, 0.15)");background-color: #eee;}
+		}
+		
+	    }
+        }
+    }
+    
+}
+
+.selectbox {
+	width: 120px;position: relative;display: inline-block;margin-top: 5px;border: 1px solid #ccc; 
+	#gradient .vertical(#fff, #e6e6e6); .border-radius(3px);
+	
+	&:hover{border-color: #999;}
+	
+	select {z-index: 10;padding: 0;width:99%; height: 22px;margin: 0;position: relative;.opacity(0);}
+	.selecttext {z-index: 9;position: absolute;left: 5px;display: inline-block; line-height: 22px;}
+	.select-arrow {
+		background: url(../images/cpanel/dk_arrows.png) no-repeat 50% 50%;
+		position: absolute;display: inline-block; height: 20px;width: 26px;top: 0;right: 0;
+	}
+}
+
+
+/*  3.Select special positions
+--------------------------------------------------------- */
+.yt-sticky{position:relative;z-index: 80;
+    .module{position:absolute;z-index:88;margin-bottom:10px;border: none;
+        .module-inner1{position:relative;
+            .module-inner2{margin:6px;
+                .module-inner3{padding:10px;background-color:@white;font-size: 12px;
+		}
+            }
+        }
+    }
+}
+
+.btn-special{height:45px;width:45px;background-color:@gray;display:block;position:absolute;left:0px;cursor:pointer;text-align: center;
+    span{font-size: 20px;line-height: 36px;width:24px;margin: 0 4px 0 8px;}
+    &:hover span{color:@white;text-shadow: 0 0 7px rgba(255, 255, 255, 0.7);}
+}
+
+//Sticky Top
+#yt_notice{position:fixed;top:0px;height: 0px;min-height: 0px;z-index: 96;
+    .yt-notice{
+        .module{background-color:@bgBtnspecial;color: @grayLighter; .box-shadow(~"0 0 3px #999999,inset 0 -1px 0 #ccc"); position:absolute;top:-99em;z-index:88;text-align:center;width:100%;min-height:35px;margin:0;border: none;
+            &.active{.box-shadow( ~"0 0 3px #999999,inset 0 -1px 0 #ddd");
+                .btn-special{color: @white;background: #5E7696;border-radius: 0;}
+            }
+            .module-inner1{position:relative;padding:10px;
+                .btn-special{position:absolute;right:90px;left:auto;height: 39px;color: #BFCFE6;margin-top: -1px;.border-radius(0 0 3px 3px) ;
+                    span{margin:0 8px 0 8px;line-height: 36px;}
+                }
+		.modcontent {padding: 0;color: @paginationBorder;font-size: 12px;
+		    a{color: @white;display: inline-block;}
+		}
+            }
+        }
+    }
+}
+
+//Sticky Left
+#yt_sticky_left{position:fixed;z-index: 250;left:0;top:230px;padding: 0;
+    .yt-sticky{.transition(all 0.3s ease-in-out 0s);
+        .module {width:100%;left: -100%;background: rgba(0,0,0,0.5);
+            &:first-child .btn-special{border-radius: 0 3px 0 0;}
+            &:last-child .btn-special {border-radius: 0 0 3px 0;}
+            .btn-special{left:100%;top:-6px;height: 50px;color: #bfcfe6;border-bottom: 1px solid #7c91ae;
+                span{line-height: 50px;}
+            }
+        }
+    }
+}
+
+//Sticky Right
+#yt_sticky_right{position:fixed;z-index: 250;right:0;top:300px;padding: 0;
+    .yt-sticky{.transition(all 0.3s ease-in-out 0s);
+        .module{width:100%;position:absolute;z-index:88;right: -100%;background: rgba(0,0,0,0.5);
+            &:first-child .btn-special{border-radius: 3px 0  0 0;}
+            &:last-child .btn-special {border-radius: 0 0  0 3px ;}
+            .btn-special{left:auto;right: 100%;top:-6px;height: 50px;color: #fff;border-bottom: 1px solid #777;
+                span{line-height: 50px;}
+            }
+        }
+    }
+}
+
+
+//Sticky Bottom
+#yt_tool_bottom {position:fixed;right:70px;bottom:-1px;height: 0px;min-height: 0px;z-index: 89;
+    .module{position:absolute;z-index:88;margin: 0 ;background-color:@background1; .box-shadow( ~"0 0 5px rgba(0, 0, 0, 0.4), -1px -1px 0 darken(@background1,10%), -1px 0 0 darken(@background1,10%) inset;");border: none;
+        .module-inner2{padding: 6px;
+            .module-inner3{padding: 10px;background: #fff;
+                .box-livesupport {
+                    input,textarea{width:95%;font-size: 12px;}
+                }
+		.modcontent {padding: 0;font-size: 12px;}
+            }
+        }
+        
+        .btn-special{
+            left:auto;top:-36px;right:0px;width:auto;height: 35px;padding: 0 10px 0 0;font-size: 16px;font-weight: bold;background: @background1;color: #eee; border: 1px solid darken(@background1,10%);border-bottom: 0;
+            .border-radius(3px 3px 0 0);.box-shadow( ~"1px 1px 0 rgba(255, 255, 255, 0.2) inset, 0px -2px 2px rgba(0, 0, 0, 0.15)");
+            span{line-height: 32px;}
+        }
+        
+    }
+}
+
+
+/* 4.cookieMessage
+--------------------------------------------------------- */
+#outer{
+    #cookieMessageContainer{top: auto;bottom: 0;font-size: 12px;text-align: center;border-top: 1px solid #EAEAEA;
+ #translucent .background(#fffceb,0.8);
+ .cookie_button {text-decoration: underline;}
+    }
+}

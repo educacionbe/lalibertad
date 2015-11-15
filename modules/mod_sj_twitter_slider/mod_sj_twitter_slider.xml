@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0.0" client="site" method="upgrade">
+	<name>SJ Twitter Slider</name>
+	<creationDate>January 2014</creationDate>
+	<author>YouTech Company</author>
+	<copyright>Copyright (c) 2014 YouTech Company</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>contact@ytcvn.com</authorEmail>
+	<authorUrl>http://www.smartaddons.com</authorUrl>
+	<version>1.0.1</version>
+	<description>TPL_YTFRAMEWORK_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_sj_twitter_slider">mod_sj_twitter_slider.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>core</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages/>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_sj_twitter_slider/core/fields">
+			<fieldset name="basic">
+				<field type="sjheading" label="General Options"/>
+				<field name="screenname" type="text" default=""
+				       label="Screen Name" description="Screen Name"/>
+				<field name="consumekey" type="text" default=""
+				       label="Consume Key" description="Consume Key"/>
+				<field name="consumersecret" type="text" default=""
+				       label="Consume Secret" description="Consume Secret"/>
+				<field name="access_token" type="text" default=""
+				       label="Access Token" description="Access Token"/>
+				<field name="access_token_secret" type="text" default=""
+				       label="Access Token Secret" description="Access Token Secret"/>	   
+				<field name="count" type="text" default="6"
+				       label="Count"
+				       description="Total number of tweets to display. The default value of 0 will display all tweets."/>
+				<field type="sjheading" label="Other Options"/>
+				<field name="display_avatars" type="radio" class="btn-group" default="1"
+				       label="Display Avatar" description="Display the avatars of the users">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="display_follow_button" type="radio" class="btn-group" default="1"
+				       label="Display Follow Button" description="Display follow button">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="display_direction_button" type="radio" class="btn-group" default="0"
+				       label="Display Direction Button" description="Display direction button">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field type="sjheading" label="Effect Options"/>
+				<field name="start" type="text" default="1" label="START_SLIDE_LABEL" description="START_SLIDE_DESC"/>
+				<field name="play" type="radio" default="0" class="btn-group" label="Auto Play" description="Auto Play">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="interval" type="text" default="5000" label="INTERVAL_LABEL" description="INTERVAL_DESC"/>
+				<field name="pause_hover" type="radio" default="hover" class="btn-group" label="PAUSE_ON_HOVER_LABEL"
+				       description="PAUSE_ON_HOVER_DESC">
+					<option value="hover">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="effect" type="radio" class="btn-group" default="slide" label="Effect" description="Effect">
+					<option value="slide">Slide</option>
+					<option value="fade">Fade</option>
+				</field>
+				<field name="swipe_enable" type="radio" default="1" class="btn-group" label="SWIPE_LABEL"
+				       description="SWIPE_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout"
+				       label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+				<field name="moduleclass_sfx" type="text"
+				       label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+				       description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+				<field name="pretext" type="textarea" default="" label="Pre-text" description="Intro text of module"
+				       cols="40" rows="4" filter="raw"/>
+				<field name="posttext" type="textarea" default="" label="Post-text" description="Footer text of module"
+				       cols="40" rows="4" filter="raw"/>
+
+				<field name="owncache" type="list" default="1"
+				       label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING
+					</option>
+				</field>
+
+				<field name="cache_time" type="text" default="900"
+				       label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

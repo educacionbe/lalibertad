@@ -1,0 +1,329 @@
+/*******************************************
+***          YT Framework: less          ***
+*******************************************/
+
+// --* Menu Style Templates  *----------------------
+// -----------------------------------------------
+/*   1.LTR Language Menu Style
+ *      1.Moo menu 
+ *      2.Dropline Menu
+ *      3.Mega Menu
+ *      4.Responsive Menu
+ *      
+ *   2.RTL Language Menu Style
+ *      1.Moo menu & Css Menu
+ *      2.Dropline Menu
+ *      3.Mega Menu
+ *      4.Responsive Menu
+ *   
+ */
+
+
+// 1. RTL Menu Style
+// --------------------------------------------------
+#yt_mainmenu{
+   
+    // 1.1 Moo menu 
+    // -------------------------
+     
+     // Fancy Menu
+    .fancy {background:@background1;position: absolute;padding: 0;margin: 0;height: 1px !important;opacity: 0.5;}
+    
+    #moonavigator {margin: 0 ;padding: 0;list-style: none;position: relative;z-index: 2;list-style: none;
+        li.level1 {float: left;position: relative;padding: 0;margin: 0 1px 0 0;z-index: 1;list-style: none;
+	    &:before{
+		content: "";
+		height: 18px;
+		width: 100%;
+		top: 100%;
+		left: 0;
+		display: block;
+		overflow: hidden;
+		position: absolute;
+		background: #fff;
+	    }
+            > .item-link  {margin: 0 ;line-height: 30px;padding: 8px 15px ;color: #707070;font-size:16px;display: block;
+		&.active{background: @background1;color: #fff;}
+		&:hover{color: #fff;background: @background1;}
+	    }
+            
+            // Child Menu Item
+           .fa-angle-down{font-size:14px;margin:0 5px;}
+            
+            // Add description and show icons
+            .showdesc{
+                .menu-title{line-height: 100%;padding-bottom: 3px;margin-top: -1px;display: block;}
+                .menu-desc{display: block;font-size: 11px;color: #ccc;line-height: 100%;}
+            }
+            
+            //Hover and Active (:hover of cssmenu, .hover of moomenu)
+            &:hover, &.active{background: @background1;color: #fff;
+		> .item-link{color: #fff;}
+	    }
+            &.first {border: none;}
+            &.last {}
+            
+        }
+        
+        // Show All Submenu
+        ul.subnavi  {
+	    margin-top: 18px;
+	    background-color: rgb(255,255,255,0.9);
+	    box-shadow: 0px 0px 3px 1px #ddd;
+            left: 0;position: absolute;z-index: 3;padding: 0;list-style: none;width: 220px; visibility: hidden;
+            .translate(0,20px);  .transition(transform 0.2s ease-in-out 0s); .opacity(0);
+            ul.subnavi{.translate(20px,0);}
+            
+            li {padding: 0 0 1px 0;position: relative;
+                .item-link {display: block;margin: 0;padding: 3px 12px 3px 25px;color: #707070;font-size: 100%;text-transform: none;line-height: 25px;position: relative;
+		    &:before{
+			content: "";
+			height: 8px;
+			width: 8px;
+			border-radius: 99px;
+			position: absolute;
+			top: 11px;
+			left: 8px;
+			display: block;
+			background: #b1b1b1;
+		    }
+		}
+		.fa-angle-right{display: none;}
+                // Add description and show icons
+                .showdesc{text-align: left;
+                    span.menu-title{padding-bottom: 5px;}
+                    span.menu-desc{font-family: "arial";padding-bottom: 3px;}
+                }
+                
+                // Hover and Active menu
+                &:hover,&.hover,&.active{
+                    > .item-link{color: @background1;
+			&:before{background: @background1;}
+		    }
+                }
+                
+            }
+	    &.level3, &.level4, &.level5{margin-top: 0;}
+        }
+       
+        // Submenu level2 -> level5
+        li.level1:hover ul.level2,li.level1.hover ul.level2{
+            visibility: visible;box-shadow: 0 1px 2px 1px #ddd; .translate(-1px,0); .opacity(100);
+        }
+        li.level2:hover ul.level3,li.level2.hover ul.level3,
+        li.level3:hover ul.level4,li.level3.hover ul.level4,
+        li.level4:hover ul.level5,li.level4.hover ul.level5,
+        li.level5:hover ul.level6,li.level5.hover ul.level6{
+            left: 100%;top:0;visibility: visible;box-shadow:  2px 2px 1px rgba(0, 0, 0, 0.2), 1px 1px 0 rgba(0, 0, 0, 0.1) inset;.translate(0,0);.opacity(100);
+        }
+        
+      
+        
+    }
+    
+    // 1.2 Dropline Menu
+    // ----------------------------------
+    #droplinenavigator{#moonavigator();
+        // li.level1{ li.level1();}
+         li.level1{position: static;
+            &.havechild:after{display: none;}
+            >.item-link{padding: 12px 35px ;}
+         }
+          ul.level2{margin: 0;width: 100%;padding: 5px;
+               li.level2{float: left;border: none;
+                   .level2 {
+                       &.havechild:after{content: "";display: none;}
+                   }
+                   &:hover{position: relative;
+                       ul.level3{left: 0;top: 100%;}
+                   }
+               }
+          }
+    }
+    
+    // 1.3 Mega Menu
+    // ----------------------------------
+    #meganavigator{list-style: none;padding: 0;margin: 0;position: relative;z-index: 60;
+	li.level1.full_megachild:before{display: none;}
+	.fa-angle-right{display: none;}
+        li.level1{#moonavigator li.level1();}
+        li.full_megachild{position: static;
+            // Child Menu Item
+            .mega-content{left: 0 !important; width: 100%;box-shadow: 0 1px 2px 1px #ddd;}
+            
+        }
+	li.style-mega1{
+	    ul{padding: 0;}
+	    .mega-col.last{
+		padding: 0 20px 22px 240px;
+		background: url(../images/bg/doctors_mega.png) no-repeat 0 0;
+	    }
+	}
+	li.style-mega2{
+	    .mega-col.last{
+		padding: 0 300px 0 0;
+		background: url(../images/bg/doctors_mega2.png) no-repeat 100% 100%;
+	    }
+	}
+        .level1 > .level2{
+	    top: 64px !important;
+	    box-shadow: 0 1px 2px 1px #ddd;
+	    
+	}
+        .mega-content{position: absolute;left: -999em; display:none;z-index: 10;background: rgb(255,255,255,0.9);border-bottom: 6px solid @linkColor;border-top: 1px solid @linkColor;
+                .mega-content{box-shadow:  0 1px 2px 1px #ddd;}
+                &.level4, &.level5{margin: 0;}
+                //Mega Child
+                &.megachild .mega-content-inner {padding: 10px 0 0;display: block;}
+                
+                //Mega Colums
+                .mega-col {float: left;     
+                    &.one{width: 220px;}
+                    &.more{padding: 0 10px;}
+                    
+                    //Mega Group
+                    .mega-group  {display: block;
+                        div.mega-group-title{
+                            .item-link{font-size: 16px;padding: 0 10px 10px;color: #707070;display: block;text-transform: uppercase;padding: 8px 0 12px 0;font-weight: 400;}
+                            .showdesc .menu-title{padding: 0 0 5px;}
+                        }
+                    }
+                    .mega-module{
+                        .mega-module-title{margin: 0 10px;}
+                    }
+                }
+                
+                ul.subnavi,.menu {list-style: none;padding: 0;
+                    li{#moonavigator ul.subnavi li();}
+                }
+                
+            
+                
+          }
+	  
+	 
+            
+           
+       
+     }
+    
+    // 1.4 Responsive Menu
+    // ----------------------------------
+    .yt-resmenu{
+        a{padding:6px 15px; height: 45px;background: @grayLight;line-height: 54px;display: inline-block;
+            .fa{margin: 0 ; font-size: 28px; color: @white;}
+        }
+        
+     }
+    
+    
+}
+
+// Sidebar  menu
+.mm-list > li:hover{
+    a,span{background: @background1;color: @white;}
+}
+.yt-off-resmenu{position: absolute;top: 0; z-index: 2; width: 300px; left:0px;height: 100%;overflow: auto;
+    .top-resmenu{padding:10px 25px; background: @background1;font-size: 20px; color: @white; margin: 0;font-weight: normal;cursor: pointer;
+        .fa-bars{font-size: 28px; }
+       
+        .fa-times{margin: 5px 0 0;color: @white;font-size: 16px;}
+    }
+    
+    > ul.resmenu{margin: 1em 1.5em ;font-size: 16px;
+          > li{padding-bottom: 15px;}
+          a{color: #ddd;padding: 5px 0;display: block;
+              &:focus,&:hover,&.active {color: @linkColor;}
+          }
+         //Menu level2
+          ul.nav{font-size: 14px;font-weight: normal;
+               a{padding:  1px 0;background: transparent;}
+               //ul.nav{text-indent: 15px;}
+          }
+         
+     }
+}
+
+
+
+
+// 2. RTL Menu Style
+// --------------------------------------------------
+.rtl{
+    #yt_mainmenu{
+       #meganavigator .mega-content ul.subnavi li .item-link:before,
+       #meganavigator .mega-content .menu li .item-link:before{top: 14px;}
+        //2.1 Moo Menu & Css Menu
+        // ----------------------------------
+	#meganavigator .mega-content ul.subnavi li .item-link, #meganavigator .mega-content .menu li .item-link{padding: 6px 25px 6px 12px;}
+	
+        ul.navirtl{
+            li.level1{float: right;margin: 0 ; 
+                &:hover ul.level2,&.hover ul.level2{left: auto;right: 0;}
+               
+            }
+            ul {left: auto;right: -999em;}
+            ul.subnavi  {
+                li {
+                    .item-link{padding: 6px 25px 6px 12px;
+			&:before{
+			    left: auto;
+			    right: 8px;
+			    top: 13px;
+			}
+                    }
+                     // Add description and show icons
+                   
+                    &:hover ul.level3,
+                    
+                    li.level3:hover ul.level4,
+                    li.level4:hover ul.level5{left: auto;right: 100%;}
+                }
+                
+            
+            }
+        }
+        
+        //2.2 Dropline Menu
+        // ----------------------------------
+        #droplinenavigator{
+            ul.level2 li.level2{float: right;
+                &:hover{
+                    ul.level3{left: auto;right: 0;}
+                }
+            }
+        }
+        
+        //2.3 Mega Menu
+        // ----------------------------------
+        #meganavigator{
+	    .level1 > .level2{
+	    right: 0;
+	    left: auto !important;
+	    
+	    }
+	    li.style-mega1 .mega-col.last{
+		padding: 0 240px 22px 20px;
+		background: url(../images/bg/doctors_mega_rtl.png) no-repeat right 0;
+	    }
+	    li.style-mega2 .mega-col.last{
+		padding: 0 0 0 300px;
+		background: url(../images/bg/doctors_mega2_rtl.png) no-repeat left bottom;
+		
+	    }
+            li.level1{float: right;
+                &.havechild:after {right: 10px; left: auto;}
+		.level3.mega-content{
+		}
+                .mega-content{ box-shadow:0 1px 2px 1px #ddd;
+		    
+                    //Mega colums
+                    .mega-col {float: right;}
+                    
+                }
+                &.havechild:after {right: auto;left: 15px;}
+            }
+        }
+    }
+}
+

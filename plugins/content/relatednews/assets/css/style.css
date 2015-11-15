@@ -1,0 +1,74 @@
+﻿/*------------------------------------------------------------------------
+# Yt Related News Plugins - Version 1.0
+# Copyright (C) 2011 SmartAddons.Com. All Rights Reserved.
+# @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+# Author: YouTech Company
+# Websites: http://www.smartaddons.com/
+ -------------------------------------------------------------------------*/
+
+.yt_plg_relatednews  .yt_plg_title{
+	font-weight: bold;
+	font-size: 14px;
+	margin: 10px 0px
+}
+
+
+.yt_plg_relatednews .yt_item_rows {    
+    width: 100%; 
+    overflow: hidden;
+}
+.yt_plg_relatednews .yt_item_rows .yt_item_element {    
+    float:left
+}
+.yt_plg_relatednews .yt_item_rows .yt_item_element .yt_item_content {
+    margin: 2px 6px;
+    
+}
+.yt_plg_relatednews .yt_item_rows .yt_item_element .yt_item_wrapper{    
+    /*margin: 6px; */
+    overflow: hidden; 
+    /*background-color: #c4c4c4; */
+   /* border: 1px solid #ffffff; */
+   /* padding: 5px;*/
+}
+.yt_plg_relatednews .yt_item_rows .yt_item_element .yt_item_bottom_bg{
+    background: url('item_bottom_bg.png') no-repeat scroll 0 0 transparent;
+    margin-top: 5px;
+    height: 31px
+
+
+}
+
+
+.yt_plg_relatednews .yt_item_rows .yt_item_element .yt_item_wrapper .item_desc{
+/*    line-height: 24px;*/
+    padding-top: 5px;
+}
+.yt_plg_relatednews .yt_item_rows .yt_item_element .yt_item_wrapper .item_read_more {
+    float: left;
+    height: 22px;
+    margin-top: 5px;    
+
+}
+
+.yt_plg_relatednews .yt_item_rows .yt_item_element .yt_item_wrapper .item_read_more a{    
+    
+    padding: 0px 5px;
+    top: 2px;
+    position: relative;
+    color: #0f3e64;
+    
+}
+
+.yt_plg_relatednews .yt_item_rows .yt_item_element .yt_item_wrapper .item_image{
+    float: left;
+    margin-right: 5px 
+    
+}
+.yt_plg_relatednews .yt_item_rows .yt_item_element .yt_item_wrapper .item_content{
+    text-align: left
+    
+}
+.yt_plg_relatednews .yt_item_rows .yt_item_element .item_content .item_desc p{
+	margin: 0px
+}

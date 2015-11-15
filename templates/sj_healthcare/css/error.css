@@ -1,0 +1,111 @@
+/* ******************************
+***********Reset css*********** */
+
+/* //////////////////////////// */
+body {
+	color: #666;
+	font-family: arial ;
+	font-stretch: condensed;
+	font-size: 14px;
+	line-height: 150%;
+	height: 100%;
+	margin: 0;
+}
+a {
+	color: #666;
+	text-decoration: none;
+}
+img{border: none;}
+h1 {font-size: 200%;}
+h2 {font-size: 180%;}
+h3 {font-size: 160%;}
+h4 {font-size: 140%; font-weight: normal}
+h5 {font-size: 120%;}
+h6 {font-size: 100%;}
+
+.wrap-inner {
+	width: 900px;
+	margin: 0 auto;
+	padding: 10px;
+	direction: ltr;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	max-width: 100%;
+	text-align: center;
+}
+.header {
+	padding: 0 0 10px 10px;
+}
+.message{font-size: 22px;font-family: 'Roboto Condensed', sans-serif;}
+.contener {
+    display: block;
+    width: 100%;
+}
+.contener .link-home{
+	display: block;
+	position: relative;
+}
+
+.contener .link-home .img-logo{
+	position: absolute;
+	top: 55px;
+	left: 35%;
+}
+.logo {display: block;margin-top: 115px;}
+.logo > a{margin-bottom: 10px;display: block;}
+.logo p{margin: 0 0 35px;color: #DD002B;font-size: 15px;}
+
+
+h4{ font-weight:100;
+	font-size:120%;
+}
+.btn i{margin-right: 5px;}
+
+.buttom-home .btn{
+	border:none;
+	padding: 7px 80px;
+	margin-left: -10px;
+	color: #fff;
+	font-size: 22px;
+	background: #58c8e2; /* Old browsers */
+	margin-bottom: 10px;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+.btn:hover,button:hover{
+	color: #fff;background: #666;
+}
+.please{font-size: 14px;display: block;margin: 20px auto;width: 65%;}
+
+.lW { float: left; clear: left; height: 25px; }
+.rW { float: right; clear: right; height: 25px; }
+.btn:focus,button:focus{box-shadow:  0 0 5px rgba(0, 0, 0, 0.2) inset,1px 1px 1px rgba(0, 0, 0, 0.3);}
+
+/* Tablet portrait (768x1024) && Small tablet landscape (800x600) */
+@media (min-width: 768px) and (max-width: 979px) {
+	div.wrap-inner{width:100%;}
+}
+/* Small tablet portrait (600x800) & Mobile landscape (480x320) */
+@media (max-width: 767px){
+	.contener .link-home .img-logo{left: 28%;}
+	img{max-width: 100%;}
+	div.wrap-inner{width:100%;}
+	div.block-left,
+	div.block-main{display: block;width:100%;}
+	div.block-left{width:80%;margin: 0 auto;}
+	div.block-main{
+		padding: 10px 15px;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	div.block-main .logo{margin: 0;}
+	div.firts-block{margin: 0;}
+	div.second-block{margin: 0;}
+	.lW { display: none;}
+	.rW { display: none;}
+}
+@media (max-width: 360px){
+	.contener .link-home .img-logo{left: 30%;width: 35%;top: 35px;}
+
+}
